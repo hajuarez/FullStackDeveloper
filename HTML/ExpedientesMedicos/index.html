@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- ===== TODO LO QUE VA EN EL HEAD ===== -->
+    <!-- El head contiene metadatos y configuración, 
+         NADA de esto se muestra visualmente en la página -->
+    
+    <!-- 1. Codificación de caracteres (SIEMPRE debe ir) -->
+    <meta charset="UTF-8">
+    
+    <!-- 2. Viewport para diseño responsive (móviles y tablets) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 3. Título de la pestaña del navegador -->
+    <title>MediCloud - Sistema de Expedientes Médicos</title>
+    
+    <!-- 4. Descripción para SEO (aparece en Google) -->
+    <meta name="description" content="Sistema seguro de expedientes médicos electrónicos para doctores y hospitales">
+    
+    <!-- 5. Autor del proyecto -->
+    <meta name="author" content="Tu Nombre o Empresa">
+    
+    <!-- 6. Favicon (icono de la pestaña) -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- 7. Hojas de estilo CSS (Externas) -->
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    
+    <!-- 8. Fuentes de Google (Ejemplo para tu proyecto) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- 9. Metadatos de seguridad (IMPORTANTE para salud) -->
+    <meta http-equiv="Content-Security-Policy" 
+          content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com">
+    
+    <!-- 10. Preconexiones para mejorar rendimiento -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- 11. Scripts que deben cargar ANTES de renderizar (opcional) -->
+    <script src="js/config.js" defer></script>
+</head>
+
+<body>
+    <!-- ===== TODO LO QUE SE VE EN LA PÁGINA ===== -->
+    <!-- El body contiene el contenido visible y la estructura 
+         de la interfaz de usuario -->
+    
+    <!-- 1. Header: Cabecera principal (Logo, navegación, usuario) -->
+    <header class="header">
+        <div class="logo">
+            <img src="img/logo-mediCloud.png" alt="MediCloud Logo">
+            <h1>MediCloud</h1>
+        </div>
+        
+        <nav class="navegacion-principal">
+            <ul>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#pacientes">Pacientes</a></li>
+                <li><a href="#citas">Citas</a></li>
+                <li><a href="#expedientes">Expedientes</a></li>
+            </ul>
+        </nav>
+        
+        <div class="usuario-actual">
+            <img src="img/avatar-doctor.jpg" alt="Dr. García">
+            <span>Dr. García</span>
+            <button id="btn-cerrar-sesion">Cerrar Sesión</button>
+        </div>
+    </header>
+    
+    <!-- 2. Contenido Principal -->
+    <main class="contenido-principal">
+        
+        <!-- 2.1 Sidebar lateral (menú de opciones) -->
+        <aside class="sidebar">
+            <h2>Opciones Rápidas</h2>
+            <ul>
+                <li><a href="#nuevo-paciente">➕ Nuevo Paciente</a></li>
+                <li><a href="#buscar">🔍 Buscar Expediente</a></li>
+                <li><a href="#laboratorio">🧪 Resultados Lab</a></li>
+                <li><a href="#recetas">💊 Recetas</a></li>
+            </ul>
+        </aside>
+        
+        <!-- 2.2 Área de trabajo principal -->
+        <section class="area-trabajo">
+            
+            <!-- Formulario de búsqueda de pacientes -->
+            <div class="buscador-pacientes">
+                <h2>Buscar Paciente</h2>
+                <form id="form-busqueda">
+                    <input type="text" 
+                           id="buscar-paciente" 
+                           placeholder="Nombre, CURP o N° de expediente..."
+                           required>
+                    <button type="submit">Buscar</button>
+                </form>
+            </div>
+            
+            <!-- Tabla de pacientes (ejemplo) -->
+            <div class="tabla-pacientes">
+                <h3>Pacientes Recientes</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>N° Exp</th>
+                            <th>Nombre</th>
+                            <th>Edad</th>
+                            <th>Última Consulta</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>EXP-2024-001</td>
+                            <td>María Pérez</td>
+                            <td>34</td>
+                            <td>Hoy 10:30 AM</td>
+                            <td>
+                                <button class="btn-ver">Ver</button>
+                                <button class="btn-editar">Editar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>EXP-2024-002</td>
+                            <td>Carlos López</td>
+                            <td>45</td>
+                            <td>Ayer</td>
+                            <td>
+                                <button class="btn-ver">Ver</button>
+                                <button class="btn-editar">Editar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Sección de alertas importantes -->
+            <div class="alertas">
+                <h3>⚠️ Alertas de Seguridad</h3>
+                <ul>
+                    <li class="alerta-roja">Paciente con alergia a penicilina - Exp 0001</li>
+                    <li class="alerta-amarilla">Resultados de laboratorio pendientes de revisar</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    
+    <!-- 3. Footer: Pie de página -->
+    <footer class="footer">
+        <p>© 2024 MediCloud | Sistema de Expedientes Médicos</p>
+        <p>Cumplimiento: NOM-004-SSA3-2012 | HIPAA</p>
+        <p>Versión 1.0.0</p>
+    </footer>
+    
+    <!-- 4. Modales y Popups (ocultos por defecto) -->
+    <div class="modal" id="modal-paciente" style="display: none;">
+        <div class="modal-contenido">
+            <span class="cerrar-modal">&times;</span>
+            <h2>Nuevo Paciente</h2>
+            <form id="form-paciente">
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" required>
+                
+                <label for="curp">CURP:</label>
+                <input type="text" id="curp" required>
+                
+                <label for="fecha-nacimiento">Fecha de nacimiento:</label>
+                <input type="date" id="fecha-nacimiento">
+                
+                <label for="alergias">Alergias conocidas:</label>
+                <textarea id="alergias" rows="3"></textarea>
+                
+                <button type="submit">Guardar Paciente</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- 5. Scripts JavaScript (al final para que cargue rápido) -->
+    <script src="js/validacion-formularios.js"></script>
+    <script src="js/busqueda-pacientes.js"></script>
+    <script src="js/modales.js"></script>
+    
+    <!-- 6. Scripts de análisis (ejemplo) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=TU-ID"></script>
+</body>
+</html>
