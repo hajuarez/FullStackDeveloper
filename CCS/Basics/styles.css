@@ -1,0 +1,13 @@
+/* styles.css 
+Challenge: Re-design the cookie widget!
+PS: Make sure you change ALL of the listed CSS properties.
+*/
+
+body {
+  background: lightblue; /* Changed from default to Alice Blue */
+  color: brown; /* Changed text color */
+  font-size: 40px; /* Changed font size */
+  font-weight: lighter; /* Changed font weight */
+  text-align: center; /* Changed text alignment */
+  margin-top: 50px; /* Changed margin-top */
+}

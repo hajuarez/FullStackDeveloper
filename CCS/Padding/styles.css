@@ -1,0 +1,49 @@
+.card{
+    color: #222222;
+    background: lightgray;
+    width: 300px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+
+    /*Challenge: 
+    Add padding values to looks as per design
+    padding-top: 100px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 100px;*/
+
+    /*BORDER examples*/
+    /*border: 2px solid red;*/
+    /*border: 4px dotted blue;*/
+    border: 4px solid #222222;
+    border-radius: 20px;
+}
+
+button{
+        /*Challenge:
+        Make the button look like Twitter´s "Following" button.
+        (Except for the font) 
+
+        Hints:
+        border color: #cfd9de
+        text color: #0f1419
+        Remember the font-weight!
+        */
+
+    color: #0f1419;
+    border: 1px solid #cfd9de;
+    background: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+    font-weight: bold;
+}

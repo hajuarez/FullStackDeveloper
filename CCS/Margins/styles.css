@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+}
+
+.red {
+    /*
+    Challenge: 
+    Add 100px of margin to the bottom of the red box.
+    */
+    background-color: red;
+    /*width: 100px;*/
+    height: 100px;
+    /*margin: 10px;*/
+    /*margin-bottom: 100px;*/
+}
+
+.blue {
+    margin-top: 20px;
+    background-color: blue;
+    /*width: 100px;*/
+    height: 100px;
+    /*margin: 10px;*/
+    margin-bottom: 20px;
+}
+
+.green {
+    background-color: green;
+    /*width: 100px;*/
+    height: 100px;
+    /*margin: 10px;*/
+}
